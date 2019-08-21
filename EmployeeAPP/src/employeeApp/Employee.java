@@ -14,7 +14,7 @@ public class Employee {
     // constructor
     public Employee(String fname, String lname, double salary, boolean has401K, int companyId, int healthPlanId) {
         maxId++;
-        id = maxId;
+        this.id = maxId;
         this.fname = fname;
         this.lname = lname;
         this.salary = salary;
@@ -26,10 +26,6 @@ public class Employee {
     // getters and setters
     public int getId() {
         return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getFname() {
