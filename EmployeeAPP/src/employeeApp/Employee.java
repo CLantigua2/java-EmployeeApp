@@ -88,4 +88,14 @@ public class Employee {
     public void giveRaise(double raise) {
         this.salary += (salary * raise);
     }
+
+    // lets me override built in methods
+    // in this case, I'm overriding the toString() method with my own
+    @Override
+    public String toString() {
+        String rtnStr = "id: " + this.id + "\n" + "fname: " + this.fname + "\n" + "lname: " + this.lname + "\n"
+                + "salary: " + this.salary + "\n" + "has401K: " + this.has401K + "\n" + "companyId: " + this.companyId
+                + "\n" + "healthPlanId: " + this.healthPlanId + "\n";
+        return rtnStr;
+    }
 }
