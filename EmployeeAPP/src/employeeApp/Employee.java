@@ -2,6 +2,7 @@ package employeeApp;
 
 public class Employee {
     // fields - state - information
+    private static int maxId = 0; // static shared across all objects, private limits it to just Employee classes
     private int id;
     private String fname;
     private String lname;
@@ -11,6 +12,16 @@ public class Employee {
     private int healthPlanId;
 
     // constructor
+    public Employee(String fname, String lname, double salary, boolean has401K, int companyId, int healthPlanId) {
+        maxId++;
+        id = maxId;
+        this.fname = fname;
+        this.lname = lname;
+        this.salary = salary;
+        this.has401K = has401K;
+        this.companyId = companyId;
+        this.healthPlanId = healthPlanId;
+    }
 
     // getters and setters
     public int getId() {
