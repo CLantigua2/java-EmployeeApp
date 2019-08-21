@@ -10,29 +10,75 @@ public class Employee {
     private int companyId;
     private int healthPlanId;
 
-    // methods - behaviors
+    // constructor
 
-    // getters (read fields)
+    // getters and setters
     public int getId() {
-        return id;
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getFname() {
-        return fname;
+        return this.fname;
     }
 
-    public String setFname(String fname) {
+    public void setFname(String fname) {
         this.fname = fname;
-        return "first name set";
     }
 
-    public String setLname(String lname) {
-        this.lname = lname;
-        return "last name set";
-    }
-
-    // getter doesn't need the this keyword
     public String getLname() {
-        return lname;
+        return this.lname;
+    }
+
+    public void setLname(String lname) {
+        this.lname = lname;
+    }
+
+    public double getSalary() {
+        return this.salary;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
+    public boolean isHas401K() {
+        return this.has401K;
+    }
+
+    public boolean getHas401K() {
+        return this.has401K;
+    }
+
+    public void setHas401K(boolean has401K) {
+        this.has401K = has401K;
+    }
+
+    public int getCompanyId() {
+        return this.companyId;
+    }
+
+    public void setCompanyId(int companyId) {
+        this.companyId = companyId;
+    }
+
+    public int getHealthPlanId() {
+        return this.healthPlanId;
+    }
+
+    public void setHealthPlanId(int healthPlanId) {
+        this.healthPlanId = healthPlanId;
+    }
+
+    // regular methods
+    public String getName() {
+        return fname + " " + lname;
+    }
+
+    public void giveRaise(double raise) {
+        this.salary += (salary * raise);
     }
 }
